@@ -1,0 +1,155 @@
+// The desktop session keeps SHELL=/bin/bash until the next login.
+// Pin the pane shell so Ghostty does not open Bash.
+default_shell "/bin/zsh"
+
+// Full box around every pane, including after Esc returns to normal mode.
+// The default style is only a title line, so the border vanished on Esc.
+pane_frames true
+pane_frame_style "full"
+
+// Stock Zellij layout. The focused border is a greenish highlighter yellow
+// in normal mode and in pane or tab mode.
+// Ghostty does not answer the color probe, so the theme is pinned.
+explicit_theme_hue "dark"
+theme "vivid"
+
+themes {
+    vivid {
+        text_unselected {
+            base 235 235 235
+            background 11 11 11
+            emphasis_0 255 100 20
+            emphasis_1 40 140 255
+            emphasis_2 70 255 80
+            emphasis_3 210 70 255
+        }
+        text_selected {
+            base 255 255 255
+            background 48 48 48
+            emphasis_0 255 100 20
+            emphasis_1 40 140 255
+            emphasis_2 70 255 80
+            emphasis_3 210 70 255
+        }
+        ribbon_selected {
+            base 11 11 11
+            background 204 255 0
+            emphasis_0 90 20 28
+            emphasis_1 90 20 28
+            emphasis_2 11 11 11
+            emphasis_3 120 10 20
+        }
+        ribbon_unselected {
+            base 11 11 11
+            background 190 190 190
+            emphasis_0 90 20 28
+            emphasis_1 70 16 80
+            emphasis_2 16 50 100
+            emphasis_3 120 10 20
+        }
+        ribbon_hover {
+            base 11 11 11
+            background 245 245 245
+            emphasis_0 90 20 28
+            emphasis_1 70 16 80
+            emphasis_2 16 50 100
+            emphasis_3 120 10 20
+        }
+        table_title {
+            base 70 255 80
+            background 11 11 11
+            emphasis_0 255 100 20
+            emphasis_1 40 140 255
+            emphasis_2 70 255 80
+            emphasis_3 210 70 255
+        }
+        table_cell_selected {
+            base 255 255 255
+            background 48 48 48
+            emphasis_0 255 100 20
+            emphasis_1 40 140 255
+            emphasis_2 70 255 80
+            emphasis_3 210 70 255
+        }
+        table_cell_unselected {
+            base 235 235 235
+            background 11 11 11
+            emphasis_0 255 100 20
+            emphasis_1 40 140 255
+            emphasis_2 70 255 80
+            emphasis_3 210 70 255
+        }
+        list_selected {
+            base 255 255 255
+            background 48 48 48
+            emphasis_0 255 100 20
+            emphasis_1 40 140 255
+            emphasis_2 70 255 80
+            emphasis_3 210 70 255
+        }
+        list_unselected {
+            base 235 235 235
+            background 11 11 11
+            emphasis_0 255 100 20
+            emphasis_1 40 140 255
+            emphasis_2 70 255 80
+            emphasis_3 210 70 255
+        }
+        frame_unselected {
+            base 180 180 180
+            background 11 11 11
+            emphasis_0 255 235 0
+            emphasis_1 40 140 255
+            emphasis_2 150 90 255
+            emphasis_3 210 70 255
+        }
+        frame_selected {
+            base 204 255 0
+            background 11 11 11
+            emphasis_0 204 255 0
+            emphasis_1 40 140 255
+            emphasis_2 255 60 180
+            emphasis_3 255 100 20
+        }
+        frame_highlight {
+            base 204 255 0
+            background 11 11 11
+            emphasis_0 0 240 210
+            emphasis_1 150 90 255
+            emphasis_2 204 255 0
+            emphasis_3 204 255 0
+        }
+        exit_code_success {
+            base 70 255 80
+            background 11 11 11
+            emphasis_0 0 240 210
+            emphasis_1 11 11 11
+            emphasis_2 255 60 180
+            emphasis_3 40 140 255
+        }
+        exit_code_error {
+            base 255 45 70
+            background 11 11 11
+            emphasis_0 255 235 0
+            emphasis_1 255 100 20
+            emphasis_2 180 180 180
+            emphasis_3 150 90 255
+        }
+        multiplayer_user_colors {
+            player_1 255 60 180
+            player_2 40 140 255
+            player_3 150 90 255
+            player_4 255 235 0
+            player_5 0 240 210
+            player_6 255 100 20
+            player_7 255 45 70
+            player_8 180 180 180
+            player_9 70 255 80
+            player_10 255 190 120
+        }
+    }
+}
+
+env {
+    SHELL "/bin/zsh"
+}
